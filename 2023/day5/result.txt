@@ -1,0 +1,12 @@
+/home/benedikt/PycharmProjects/adventofcode/venv/bin/python /home/benedikt/PycharmProjects/adventofcode/2023/day5/day5-2a.py 
+Seed 2019933646:2719986 - Min Location: 3030725489
+Seed 2982244904:337763798 - Min Location: 20283860
+Seed 445440:255553492 - Min Location: 793980143
+Seed 1676917594:196488200 - Min Location: 1122936782
+Seed 3863266382:36104375 - Min Location: 1686816243
+Seed 1385433279:178385087 - Min Location: 132556316
+Seed 2169075746:171590090 - Min Location: 945616456
+Seed 572674563:5944769 - Min Location: 313045984
+Seed 835041333:194256900 - Min Location: 250145417
+Seed 664827176:42427020 - Min Location: 405198597
+Minimum of all location numbers: 20283860
