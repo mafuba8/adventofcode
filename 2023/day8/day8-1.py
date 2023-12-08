@@ -15,13 +15,13 @@ instructions = []
 for d in lines[0].strip():
     instructions.append(d)
 
-regex = re.compile(r'(.{3})\s=\s\((.{3}),(.{3})\)')
+# Parse nodes and their directions.
 node_dict = {}
+regex = re.compile(r'(.{3})\s=\s\((.{3}),\s(.{3})\)')
 for line in lines[2:]:
-    a = line.split(' = ')
-    node_name = a[0]
-    b = a[1].strip().replace('(', '').replace(')', '').split(', ')
-    node_dirs = (b[0], b[1])
+    search = regex.search(line)
+    node_name = search.group(1)
+    node_dirs = (search.group(2), search.group(3))
     node_dict[node_name] = node_dirs
 
 
