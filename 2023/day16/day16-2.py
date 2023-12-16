@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Advent of Code 2023 - Day 16, Part 1
+# Advent of Code 2023 - Day 16, Part 2
 # Benedikt Otto
 
 # Open puzzle file.
