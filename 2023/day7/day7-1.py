@@ -11,7 +11,7 @@ value_dict.update((str(x), x) for x in range(2, 10))
 
 # Open puzzle file.
 #with open('example_7.txt') as file:
-with open('input_7.txt') as file:
+with open('../inputs/input_7.txt') as file:
     lines = file.readlines()
 
 # Build list of draws and convert card letters to their values.

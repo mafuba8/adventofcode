@@ -6,7 +6,7 @@ import re
 
 # Open puzzle file.
 #with open('example_8-3.txt') as file:
-with open('input_8.txt') as file:
+with open('../inputs/input_8.txt') as file:
     lines = file.readlines()
 
 

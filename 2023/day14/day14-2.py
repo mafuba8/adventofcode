@@ -5,7 +5,7 @@
 # Open puzzle file.
 lines = []
 #with open('example_14.txt') as file:
-with open('input_14.txt') as file:
+with open('../inputs/input_14.txt') as file:
     for line in file:
         lines.append(line.strip())
 

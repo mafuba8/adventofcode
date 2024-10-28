@@ -11,7 +11,7 @@ low_pulse_count = 0
 # Open puzzle file and parse it.
 input_list = []
 #with open('example_20-2.txt') as file:
-with open('input_20.txt') as file:
+with open('../inputs/input_20.txt') as file:
     lines = file.read().split('\n')
     del lines[-1]
     for line in lines:

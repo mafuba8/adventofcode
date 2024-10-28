@@ -8,7 +8,7 @@ start = (0, 0)
 map_width = 0
 map_height = 0
 #with open('example_21.txt') as file:
-with open('input_21.txt') as file:
+with open('../inputs/input_21.txt') as file:
     lines = file.readlines()
     map_height = len(lines)
     for row_num, row in enumerate(lines):

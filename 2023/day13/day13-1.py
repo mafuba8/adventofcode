@@ -4,7 +4,7 @@
 
 # Open puzzle file.
 #with open('example_13.txt') as file:
-with open('input_13.txt') as file:
+with open('../inputs/input_13.txt') as file:
     content = file.read()
     blocks = content.split('\n\n')
 

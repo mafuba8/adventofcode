@@ -5,7 +5,7 @@ import math
 
 # Open puzzle file.
 #with open('example_10-4.txt') as file:
-with open('input_10.txt') as file:
+with open('../inputs/input_10.txt') as file:
     lines = file.readlines()
 
 # Assuming rectangular area (accounting for newline \n).

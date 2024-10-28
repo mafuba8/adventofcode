@@ -3,7 +3,7 @@
 # Benedikt Otto
 
 # Open puzzle file.
-with open('input_1.txt') as file:
+with open('../inputs/input_1.txt') as file:
     lines = file.readlines()
 
 # Find first and last digit in each line.

@@ -5,7 +5,7 @@
 # Open puzzle file and parse into dict(key=(x, y), val=symbol)
 hiking_map = {}
 #with open('example_23.txt') as file:
-with open('input_23.txt') as file:
+with open('../inputs/input_23.txt') as file:
     for row_num, row in enumerate(file.readlines()):
         row = row.strip()
         for col_num, char in enumerate(row):

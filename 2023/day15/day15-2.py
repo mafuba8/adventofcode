@@ -5,7 +5,7 @@
 # Open and parse puzzle file.
 sequence = []
 #with open('example_15.txt') as file:
-with open('input_15.txt') as file:
+with open('../inputs/input_15.txt') as file:
     for line in file:
         # The input is one single line.
         sequence = line.strip().split(',')

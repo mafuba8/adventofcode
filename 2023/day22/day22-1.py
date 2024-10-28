@@ -5,7 +5,7 @@
 brick_list = []
 maximum = {'x': 0, 'y': 0, 'z': 1}
 #with open('example_22.txt') as file:
-with open('input_22.txt') as file:
+with open('../inputs/input_22.txt') as file:
     for line in file.readlines():
         l1 = line.strip().split('~')
         (left_x, left_y, left_z) = l1[0].split(',')

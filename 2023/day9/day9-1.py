@@ -4,7 +4,7 @@
 
 # Open puzzle file.
 #with open('example_9.txt') as file:
-with open('input_9.txt') as file:
+with open('../inputs/input_9.txt') as file:
     lines = file.readlines()
 
 # Parse input into list of lists.

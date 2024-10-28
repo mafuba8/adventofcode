@@ -6,7 +6,7 @@ import itertools
 
 # Open puzzle file.
 #with open('example_12.txt') as file:
-with open('input_12.txt') as file:
+with open('../inputs/input_12.txt') as file:
     lines = file.readlines()
 
 # Parse puzzle file.

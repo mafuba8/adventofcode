@@ -8,7 +8,7 @@ import numpy
 hailstone_list = []
 regex = re.compile(r'(\d+),\s(\d+),\s(\d+)\s@\s+(-?\d+),\s+(-?\d+),\s+(-?\d+)')
 #with open('example_24.txt') as file:
-with open('input_24.txt') as file:
+with open('../inputs/input_24.txt') as file:
     for line in file.readlines():
         search = regex.search(line.strip())
         hailstone = (int(search.group(1)), int(search.group(2)), int(search.group(3)),

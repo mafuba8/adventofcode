@@ -8,7 +8,7 @@ from copy import deepcopy
 # Open puzzle file and parse into list
 lines = []
 #with open('example_25.txt') as file:
-with open('input_25.txt') as file:
+with open('../inputs/input_25.txt') as file:
     for line in file.readlines():
         lines.append(line.strip())
 

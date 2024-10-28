@@ -6,7 +6,7 @@ import itertools
 
 # Open puzzle file.
 #with open('example_11.txt') as file:
-with open('input_11.txt') as file:
+with open('../inputs/input_11.txt') as file:
     lines = file.readlines()
 
 # Parse lines, remember rows without a galaxy and columns with one.

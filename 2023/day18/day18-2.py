@@ -5,7 +5,7 @@
 # Open puzzle file and parse into list of tuples.
 dig_plan = []
 #with open('example_18.txt') as file:
-with open('input_18.txt') as file:
+with open('../inputs/input_18.txt') as file:
     lines = file.readlines()
     for line in lines:
         li = line.strip().split(' ')

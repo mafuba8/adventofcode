@@ -8,7 +8,7 @@ from multiprocessing import Pool
 
 # Open puzzle file.
 #with open('example_5.txt') as file:
-with open('input_5.txt') as file:
+with open('../inputs/input_5.txt') as file:
     lines = file.readlines()
 
 

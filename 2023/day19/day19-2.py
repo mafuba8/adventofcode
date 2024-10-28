@@ -5,7 +5,7 @@ import re
 
 # Open puzzle file and parse it.
 #with open('example_19.txt') as file:
-with open('input_19.txt') as file:
+with open('../inputs/input_19.txt') as file:
     input = file.read().split('\n\n')
     input_workflow = input[0].strip().split('\n')
     input_parts = input[1].strip().split('\n')
