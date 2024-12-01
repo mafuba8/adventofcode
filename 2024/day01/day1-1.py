@@ -19,6 +19,7 @@ with open(input_file) as file:
         left_list.append(l)
         right_list.append(r)
 
+
 # Sort lists and compare them element-by-element.
 left_list.sort()
 right_list.sort()

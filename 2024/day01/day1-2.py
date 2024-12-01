@@ -30,4 +30,4 @@ for num in left_list:
             count += 1
     total_similarity_score += num * count
 
-print(f'Total similarity score:: {total_similarity_score}')
+print(f'Total similarity score: {total_similarity_score}')
