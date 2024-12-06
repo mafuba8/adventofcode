@@ -57,5 +57,6 @@ while True:
         pos = new_pos
 
 
-num_visited = len(set([x for (x, _) in visited_tiles]))
+# Get number of visited tiles.
+num_visited = len(visited_tiles)
 print(f'Number of visited tiles: {num_visited}')

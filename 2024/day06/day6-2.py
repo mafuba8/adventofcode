@@ -30,8 +30,8 @@ def next_pos(pos, direction):
 
 
 def do_step(pos, direction, walk_area=area):
-    """Returns the next step (xy-coords, next_direc),
-    accounting for potential obstacles."""
+    """Returns the next step (xy-coords, next_direction),
+    accounting for potential obstacles in walk_area."""
     new_pos = next_pos(pos, direction)
     if new_pos not in walk_area.keys():
         # Next step leads outside the area.
@@ -87,44 +87,43 @@ while True:
     visited_tiles.append((pos, direction))
 
 
+# Get number of visited tiles.
 num_visited = len(set([x for (x, _) in visited_tiles]))
 print(f'Number of visited tiles: {num_visited}')
 
 
 # Try putting an obstacle on each tile on the path and simulate the full path
 potential_obstacles = [xy for (xy,_) in visited_tiles]
-
-obstacle_set = set()
+loop_obstacles = set()
 for obstacle in potential_obstacles:
     # First occurrence of the obstacle-xy in the walked path.
     index = [xy for (xy, _) in visited_tiles].index(obstacle)
     if index == 0:
         continue  # Can't put an obstacle on the starting position.
 
-    # To speed up things we can re-use the original path until the obstacle is reached for the first time.
-    modified_path = visited_tiles[:index]
-    pos_mod, dir_mod = visited_tiles[index - 1]
-
     # Modify area by putting in an additional obstacle.
     modified_area = area.copy()
     modified_area[obstacle] = '#'
 
+    # To speed up things we can re-use the original path until the obstacle is reached for the first time.
+    modified_path = visited_tiles[:index]
+    modified_pos, modified_dir = visited_tiles[index - 1]
+
     # Do a walk from pos with the modified area and check if we end up in a
     # position & state that has been walked already.
-    #pos_mod = pos
-    #dir_mod = direction
     steps = 0
     while True:
-        pos_mod, dir_mod = do_step(pos_mod, dir_mod, modified_area)
-        if pos_mod is None:
-            break  # Here the guard ran outside the area.
-        if (pos_mod, dir_mod) in modified_path:
+        modified_pos, modified_dir = do_step(modified_pos, modified_dir, modified_area)
+        if modified_pos is None:
+            break  # Guard ran out of the area = no loop.
+        if (modified_pos, modified_dir) in modified_path:
             # Here we have found a circle.
-            print(f' found circle for obstacle {obstacle} (steps: {steps})')
-            obstacle_set.add(obstacle)
+            print(f'Found circle for obstacle {obstacle} (steps: {steps})')
+            loop_obstacles.add(obstacle)
             break
-        modified_path.append((pos_mod, dir_mod))
+        modified_path.append((modified_pos, modified_dir))
         steps += 1
 
 
-print(f'Number of obstacles that result into a loop: {len(obstacle_set)}')
+# Get number of tiles that have
+print(f'Number of obstacles that result into a loop: {len(loop_obstacles)}')
