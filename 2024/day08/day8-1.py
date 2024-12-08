@@ -7,19 +7,20 @@ import itertools
 # input_file = '../examples/example_8.txt'
 input_file = '../inputs/input_8.txt'
 
-# Parse input into dict(key=xy, val=char).
-area = {}
-antennas = {}
+# Parse input into dicts.
+area = {}  # dict(key=xy, val=char)
+antennas = {}  # dict(key=frequency, val=list(antennas with this freq.))
 with open(input_file) as file:
     for row_num, row in enumerate(file.readlines()):
         for col_num, char in enumerate(row.strip()):
             area.setdefault((row_num, col_num), char)
             if char != '.':
+                # Add this antenna to the list of antennas with the same frequency (character).
                 antennas.setdefault(char, [])
                 antennas[char].append((row_num, col_num))
 
 
-# Find all antinodes of the antennas:
+# Find all antinodes created by all antenna pairs of the same frequency.
 antinode_set = set()
 for antenna in antennas:
     for antenna_pair in itertools.combinations(antennas[antenna], 2):
