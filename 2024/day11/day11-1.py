@@ -19,7 +19,8 @@ def blink(stone_row):
             # 0-stones turn to 1-stones.
             new_stone_row.append(1)
         elif len(str(stone)) % 2 == 0:
-            # Stones with even number of digits split into two.
+            # Stones with even number of digits are split into two stones,
+            # each inheriting half of the original digits.
             l = len(str(stone)) // 2
             s = str(stone)
             new_stone_row.append(int(s[:l]))

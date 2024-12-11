@@ -5,7 +5,7 @@
 # The first real scaling problem this year. Two important things to note here are:
 #  - The stones are independent of each other. We can compute results about stone rows by
 #    combining the results of the computation of each stone.
-#  - A lot of the occurring stone numbers are repeating, which enables us to use dynamic processing.
+#  - A lot of the occurring stone numbers are repeating, which enables us to use dynamic programming.
 #
 import functools
 
@@ -19,7 +19,7 @@ with open(input_file) as file:
 
 
 def blink(stone):
-    """Transforms the given stone as per the given rules, returning the list of stones
+    """Transforms the given stone as per the rules, returning the list of stones
     that replaced the original stone.
     """
     replaced_stones = []
@@ -27,7 +27,8 @@ def blink(stone):
         # 0-stones turn to 1-stones.
         replaced_stones.append(1)
     elif len(str(stone)) % 2 == 0:
-        # Stones with even number of digits split into two.
+        # Stones with even number of digits are split into two stones,
+        # each inheriting half of the original digits.
         l = len(str(stone)) // 2
         s = str(stone)
         replaced_stones.append(int(s[:l]))
