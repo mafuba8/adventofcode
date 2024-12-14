@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-# Advent of Code 2024 - Day 14, Part 1
+# Advent of Code 2024 - Day 14, Part 2
 # Benedikt Otto
+#
+# In order to find the Christmas tree Easter-egg, we look for a step
+# after which two things happen at the same time:
+#  - the bots form a long vertical line.
+#  - each bot is on a separate tile.
 #
 import re
 
@@ -120,13 +125,12 @@ for step in range(NUM_STEPS):
     for bot in robots_list:
         bot.move()
 
-    # Count the number of bots in a
+    # Count the number of bots in a single column.
     col_count, column = count_vertical_lines()
     if col_count >= max_col_count:
-        #
         print(f'Found a (new) maximum of bots ({col_count}) in a vertical row @ Step {step + 1}, Column {column}.')
         if all_bots_separate_tiles():
-            # We assume that the tree must happen if we reach a maximum of bots in a row
+            # We assume that the tree must happen if we reach the maximum of bots in a row
             # at the same time when all bots are on separate tiles.
             print(f'Found the tree @ Step {step + 1}.')
             print()
