@@ -55,24 +55,13 @@ def is_connected(graph, vertex_set):
     return start_vertex in component
 
 
-# Build Memory space as dict(key=xy, val=char) with the first 1024 bytes.
-memory_space = {}
-for x in range(MEM_SPACE_SIZE):
-    for y in range(MEM_SPACE_SIZE):
-        if (x, y) in byte_list[:NUM_BYTES_FALLEN]:
-            memory_space.setdefault((x, y), '#')
-        else:
-            memory_space.setdefault((x, y), '.')
-
+# Define start and end vertex.
 start_vertex = (0, 0)
 end_vertex = (MEM_SPACE_SIZE - 1, MEM_SPACE_SIZE - 1)
 
-
-# Perform a binary search to find the point after which we don't have a path anymore.
+# We perform a binary search to find the byte number after which we don't have a path anymore.
 low_limit = 1024
 high_limit = len(byte_list)
-memory_space_low = memory_space.copy()
-memory_space_high = memory_space.copy()
 
 while low_limit != high_limit:
     middle_point = (high_limit + low_limit) // 2
