@@ -170,3 +170,11 @@ for level in range(1, max_level):
     print()
 
 
+# Print solution string.
+solution = []
+for pair in swap_list:
+    solution.append(pair[0])
+    solution.append(pair[1])
+
+solution.sort()
+print(f'Solution: {",".join(solution)}')
