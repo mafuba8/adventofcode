@@ -1,27 +1,21 @@
 #!/usr/bin/python3
-# Advent of Code 2022 - Day 13, Part 1
+# Advent of Code 2022 - Day 13, Part 2
 # Benedikt Otto
+from copy import deepcopy
 
 # input_file = '../examples/example_13.txt'
 input_file = '../inputs/input_13.txt'
 
-# Parse input into list of pairs pf packets.
-packet_pairs_list = []
+# Parse input into list of packets.
+packet_list = []
 with open(input_file) as file:
-    first_of_pair = True
     for row in file.readlines():
         if row == '\n':
             continue
-        if first_of_pair:
-            a = []
-            # I am so mad that this actually works.
-            exec('a = ' + row)
-            first_of_pair = False
-        else:
-            b = []
-            exec('b = ' + row)
-            packet_pairs_list.append((a, b))
-            first_of_pair = True
+        # I am so mad this actually works.
+        a = []
+        exec('a = ' + row)
+        packet_list.append(a)
 
 
 def compare(left_packet, right_packet):
@@ -57,12 +51,19 @@ def compare(left_packet, right_packet):
     return c
 
 
-# Run through packet pairs and compare them.
-index_sum = 0
-for index, packet_pair in enumerate(packet_pairs_list):
-    left, right = packet_pair
-    if compare(left, right):
-        print(index + 1)
-        index_sum += index + 1
+# Append the two divider packets.
+packet_list.append([[2]])
+packet_list.append([[6]])
 
-print(f'Sum of indexes of pairs in the right order: {index_sum}')
+# Sort packet_list using Bubblesort.
+for n in range(len(packet_list), 0, -1):
+    for i in range(n - 1):
+        if not compare(packet_list[i], packet_list[i+1]):
+            # Swap packets.
+            packet_list[i], packet_list[i+1] = packet_list[i+1], packet_list[i]
+
+# Find decoder keys.
+i1 = packet_list.index([[2]])
+i2 = packet_list.index([[6]])
+print(f'Indices: {i1 + 1} (for [[2]]) and {i2 + 1} (for [[6]]).')
+print(f'Decoder key: {(i1 + 1) * (i2 + 1)}.')
