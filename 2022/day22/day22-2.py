@@ -85,6 +85,8 @@ edge_mapping_rules = [(((  0,  50), (  0,  99), '^'), ((150,   0), (199,   0), '
 
 
 def edge_order(edge_start, edge_end):
+    """Generator for all the points that are between the edge_start and the edge_end
+    coordinates, including the border points."""
     dfx, dfy = 0, 0
     count = 0
     if edge_start[0] == edge_end[0]:
