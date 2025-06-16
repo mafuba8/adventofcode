@@ -11,122 +11,178 @@ list of short descriptions and tags of each exercise.
 	- P1: Find first and last digit in each line.
 	- P2: Also include spelled-out digits.
 	- `regex`
+
+
 - Day 2: **Cube Conundrum**
 	- *Game where you pull different coloured cubes from a bag.*
 	- P1: Find possible games with a given amount of cubes.
 	- P2: Fewest number of cubes that make game possible.
+
+
 - Day 3: **Gear Ratios**
 	- *Engine schematics with numbers and symbols.*
 	- P1: Find numbers that are adjacent to a Symbol.
 	- P2: Find stars `*` that are adjacent to exactly two numbers.
 	- `2-dimensional`, `adjacency`
+
+
 - Day 4: **Scratchcards**
 	- *Winning numbers on Scratchcards.*
 	- P1: Count how many numbers are in a set of winning numbers.
 	- P2: Winning numbers create copies of all following cards.
 	- `regex`, `multiple-whitespaces`
+
+
 - Day 5: **If You Give A Seed A Fertilizer**
 	- *Assigning seeds to locations via multiple mappings.*
 	- P1: Multiple mappings of a single numbers.
 	- P2: Seeds and mappings are now ranges of numbers.
 	- `regex`, `interval`, `multiprocessing`
+
+
 - Day 6: **Wait For It**
 	- *Toy boat races where you charge the boat by holding a button.*
 	- P1: Find all button hold timers that end in a winning race.
 	- P2: The same as the first part, but with higher (concatenated) race times.
 	- `regex`, `optimization`
+
+
 - Day 7: **Camel Cards**
 	- *Card game where hands are valued similar to Poker.*
 	- P1: Rank hands according to their Poker-style value.
 	- P2: Additional Joker card that counts as the card which adds the highest value to this hand.
+
+
 - Day 8: **Haunted Wasteland**
 	- *Follow a set of right/left instructions to get out of a labyrinth.*
 	- P1: Count number of steps to go from one set start node to one set end node.
 	- P2: Find number of steps where you end up on all end nodes at the same time.
 	- `regex`, `itertools`, `least-common-multiple`
+
+
 - Day 9: **Mirage Maintenance**
 	- *Extrapolate values of a given set of numbers.*
 	- P1: Continue sequence by recursively calculating the difference between two consecutive numbers.
 	- P2: Continue the sequence to the left.
 	- `arithmetic-progression`, `list-reverse`, `recusive`
+
+
 - Day 10: **Pipe Maze**
 	- *Pipe puzzle that contains one big loop.*
 	- P1: Find the tile of the loop that is the farthest away from the starting position.
 	- P2: Count the number of inner tiles (inside the area surrounded by the loop)
 	- `2-dimensional`, `graph`, `dijkstra-algorithm`, `inner-points`
+
+
 - Day 11: **Cosmic Expansion**
-	- *Calculate distance between galaxies on the 2-dimensional map, accounting for the fact that some rows/cols are multiplied.*
+	- *Calculate distance between galaxies on the 2-dimensional map, accounting for the fact that some 
+rows/cols are multiplied.*
 	- P1: Find distance between all galaxies after each empty row/col gets doubled.
 	- P2: Find distance between all galaxies after each empty row/col gets multiplied by 1 million.
 	- `2-dimensional`, `manhattan-metric`, `regex`, `itertools` 
+
+
 - Day 12: **Hot Springs**
-	- *Count how many different arrangements of `#` symbols fit a given pattern which can include placeholders `?` that can be either `.` or `#`.*
+	- *Count how many different arrangements of `#` symbols fit a given pattern which can include 
+placeholders `?` that can be either `.` or `#`.*
 	- P1: Count the number of different arrangement for a given string and pattern.
 	- P2: Same problem, but now both the string and the pattern are repeated 5 times.
 	- `pattern`, `arrangement`, `dynamic-programming`, `recursive`, `regex`, `itertools`
+
+
 - Day 13: **Point of Incidence**
 	- *Analyzing a 2-dimensional pattern to find symmetries.*
 	- P1: Finding horizontal or vertical reflection line, where the symbols on either side get mirrored.
 	- P2: Count number of 'almost symmetries', where repairing one symbol will make it a symmetry.
 	- `2-dimensional`, `symmetries`
+
+
 - Day 14: **Parabolic Reflector Dish**
 	- *Ball-in-a-maze puzzle where you can tilt it N/S/E/W and only the rounded rocks `O` move.*
 	- P1: Calculating the location of rounded rocks and their load after tilting the area north.
 	- P2: Same as P1, but now you tilt it N-W-S-E one billion times.
 	- `2-dimensional`, `cyclic-solution`
+
+
 - Day 15: **Lens Library**
 	- *Implementing a simple hash-like algorithm and sort boxes of lenses according to their hashed label.*
 	- P1: Calculate the hash of each word in a sequence.
 	- P2: Add or replace lenses according to their hash value.
 	- `ASCII`, `hashing`, `regex`, `modify-list`
+
+
 - Day 16: **The Floor Will Be Lava**
-	- *Following a beam through a 2-dimensional arrangement of mirrors and splitters that reroute or multiply the beam.*
-	- P1: For a given starting position, count the number of tiles that are energized, having at least one beam travelling through them.
+	- *Following a beam through a 2-dimensional arrangement of mirrors and splitters that reroute or 
+multiply the beam.*
+	- P1: For a given starting position, count the number of tiles that are energized, having at least
+one beam travelling through them.
 	- P2: Find the starting position that energized the most tiles.
 	- `2-dimensional`, `mirrors`, `simulation`
+
+
 - Day 17: **Clumsy Crucible**
-	- *Finding the optimal path of a crucible through a graph, accounting for the extra constraint that it cannot go in a straight line for too long.*
-	- P1: Find the path that minimizes heat loss when the crucible is only allowed to move at most three blocks in a single direction.
+	- *Finding the optimal path of a crucible through a graph, accounting for the extra constraint that it
+cannot go in a straight line for too long.*
+	- P1: Find the path that minimizes heat loss when the crucible is only allowed to move at most three
+blocks in a single direction.
 	- P2: Same as P1, but now the crucible may only move between 4 and 10 tiles in a single direction.
 	- `2-dimensional`, `graph`, `modified-graph`, `dijkstra-algorithm`
+
+
 - Day 18: **Lavaduct Lagoon**
 	- *Given a dig plan of a big loop, work with the area obtained by digging out every tile within that loop.*
 	- P1: Find the area (number of inner tiles) that is dug out within the loop.
 	- P2: Converting the hex numbers to length, determine the area of the resulting (giant) lagoon.
 	- `2-dimensional`, `implicitly-defined`, `inner_points`, `hexadecimal`, `shoelace-formula`, `picks-theorem`
+
+
 - Day 19: **Aplenty**
 	- *Convert a list of written instructions into an algorithm for sorting gears.*
 	- P1: Parse instructions into an algorithm to sort according to their four values `x`, `m`, `a`, `s`.
 	- P2: Find the accepted ranges of all four values.
 	- `regex`, `function-generator`, `algorithm`, `partition`
+
+
 - Day 20: **Pulse Propagation**
 	- *Work with a set of interconnected modules exchanging low and high pulses, simulating a binary system.*
 	- P1: Count number of low pulses sent after pushing the button 1000 times.
-	- P2: Find smallest number of button presses needed so that several components receive a low pulse at the same time.
+	- P2: Find smallest number of button presses needed so that several components receive a low pulse 
+at the same time.
 	- `object-oriented`, `simulation`, `queue`, `least-common-multiple`
+
+
 - Day 21: **Step Counter**
 	- *In a 2-dimensional garden plot, find tiles that are reachable by an exact number of steps.*
 	- P1: Figure out how many tiles are reachable after exactly 64 steps.
-	- P2: Assuming that the pattern is infinitely repeating in every direction, figure out how many tiles are reachable with exactly 26.501.365 steps.
+	- P2: Assuming that the pattern is infinitely repeating in every direction, figure out how many tiles
+are reachable with exactly 26.501.365 steps.
 	- `flood-fill`,`dynamic-programming`, `graph`, `dijkstra-alogorithm`, `geometric-solution`, `crafted-execise`
+
+
 - Day 22: **Sand Slabs**
-	- *Jenga-like exercise where you analyze a tower of 3-dimensional bricks to figure out how they interact with each other.*
+	- *Jenga-like exercise where you analyze a tower of 3-dimensional bricks to figure out how they
+interact with each other.*
 	- P1: Find all the bricks that, after being removed, won't cause any other bricks to to fall.
 	- P2: For each brick figure out, how many other bricks will fall if you remove it.
 	- `3-dimensional`, `geometric`, `recursive`
+
+
 - Day 23: **A Long Walk**
 	- *Navigate through a maze where some tiles can only be traversed in a fixed direction.*
 	- P1: Find the longest hike (path) without stepping on a tile twice.
 	- P2: Same as P1, but now you are allowed to traverse the slopes in both directions.
 	- `2-dimensional`, `graph`, `directed-graph`, `simplified-graph`, `depth-first-search`
+
+
 - Day 24: **Never Tell Me The Odds**
 	- *Analyze the trajectories of hailstones in 3 dimensions.*
 	- P1: Ignoring the Z-axis, find the number of hailstones that will collide within a test area.
 	- P2: Figure out the the trajectory of a rock that needs to be thrown to hit all the hailstones.
 	- `regex`, `2-dimensional`, `3-dimensional`, `geometric-solution`, `linear-algebra`, `crafted-excercise`
+
+
 - Day 25: **Snowverload**
 	- *Divide a graph into smaller graphs by removing edges.*
 	- P1: Divide a network into two separate, disconnected groups by cutting only three wires.
 	- P2: No exercise because it only requires you to have obtained 49 stars.
 	- `graph`, `minimal-cut`, `kargers-algorithm`, `graph-contraction`
-
