@@ -15,12 +15,14 @@ with open(INPUT_FILE) as file:
         n = int(s[1:])
         instructions.append((r, n))
 
-
-def rotate_dial(old_pos, instruction):
+def rotate_dial(pos, instruction):
+    """Rotates the dial according to the instruction and counts how many times it hits zero."""
     rot, num = instruction
-    pos = old_pos
     zero_hits = 0
-    for _ in range(num):
+    # Full rotations always give exactly one zero hit.
+    zero_hits += (num // 100)
+    # Handle the remainder.
+    for _ in range(num % 100):
         match rot:
             case 'R':
                 pos = (pos + 1) % 100
