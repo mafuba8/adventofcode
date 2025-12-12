@@ -32,13 +32,14 @@ with open(INPUT_FILE) as file:
 
 
 # As it turns out, the input is so generously crafted that you don't have to bother with
-# any arrangements at all. Checking whether there are enough spots in each region or not is enough.
+# any arrangements at all. Checking whether there are enough spots in each region is enough.
 valid_regions = 0
 for region_size, region_counts in regions:
     free_spaces = region_size[0] * region_size[1]
     print(region_size, region_counts)
     for shape_idx, shape_count in enumerate(region_counts):
-        shape_occupied_tiles = len([xy for xy in s if s[xy] == '#'])
+        shape = shapes[shape_idx]
+        shape_occupied_tiles = len([xy for xy in shape if shape[xy] == '#'])
         free_spaces -= shape_count * shape_occupied_tiles
     if free_spaces >= 0:
         valid_regions += 1
