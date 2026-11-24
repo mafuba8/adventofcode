@@ -1,6 +1,9 @@
-# Solutions for Advent of Code 2024
+# Solutions for Advent of Code 2025
 
-Here are my solutions for the [Advent of Code 2024](https://adventofcode.com/2025) event.
+Here are my solutions for the [Advent of Code 2025](https://adventofcode.com/2025) event.
+
+Starting with 2025, there will only be 12 days of puzzles, instead of the previous 25 days.
+
 
 ## Short descriptions
 In order for me to quickly find certain puzzles, what follows is a
