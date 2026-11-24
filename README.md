@@ -7,3 +7,4 @@ certain solutions by tag.
 - [Advent of Code 2022](2022/README.md)
 - [Advent of Code 2023](2023/README.md)
 - [Advent of Code 2024](2024/README.md)
+- [Advent of Code 2025](2025/README.md)
